@@ -1,6 +1,6 @@
 ﻿namespace hugo_easy_blog
 {
-    partial class Form1
+    partial class HugoEasyBlog
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            ControlsGroupBox = new GroupBox();
+            StartServerButton = new Button();
+            ControlsGroupBox.SuspendLayout();
+            SuspendLayout();
+            // 
+            // ControlsGroupBox
+            // 
+            ControlsGroupBox.Controls.Add(StartServerButton);
+            ControlsGroupBox.Location = new Point(12, 12);
+            ControlsGroupBox.Name = "ControlsGroupBox";
+            ControlsGroupBox.Size = new Size(300, 391);
+            ControlsGroupBox.TabIndex = 0;
+            ControlsGroupBox.TabStop = false;
+            ControlsGroupBox.Text = "Controls";
+            // 
+            // StartServerButton
+            // 
+            StartServerButton.Location = new Point(6, 30);
+            StartServerButton.Name = "StartServerButton";
+            StartServerButton.Size = new Size(288, 34);
+            StartServerButton.TabIndex = 0;
+            StartServerButton.Text = "Start Server";
+            StartServerButton.UseVisualStyleBackColor = true;
+            StartServerButton.Click += StartServerButton_Click;
+            // 
+            // HugoEasyBlog
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1343, 782);
+            Controls.Add(ControlsGroupBox);
+            Name = "HugoEasyBlog";
+            Text = "Hugo Easy Blog";
+            ControlsGroupBox.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private GroupBox ControlsGroupBox;
+        private Button StartServerButton;
     }
 }
